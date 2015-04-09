@@ -5,14 +5,11 @@ var packageName = 'webview.com.example.nlawson.webview';
 function test(browser, driver) {
   return browser
     .sleep(5000)
-    .elementByXPath("//android.view.View[1]/android.widget.FrameLayout[2]" +
+    /*.elementByXPath("//android.view.View[1]/android.widget.FrameLayout[2]" +
       "/android.widget.RelativeLayout[1]/android.view.View[1]/android.view.View[3]" + 
       "/android.widget.EditText[1]").sendKeys("entering some text")
     .sleep(10000)
-    .elementByXPath('//android.webkit.WebView')
-    /*
-    .click()
-    .sleep(1000)
+    .elementByXPath('//android.webkit.WebView')*/
     .contexts()
     .then(function (ctxs) {
       console.log(ctxs);
@@ -32,7 +29,7 @@ function test(browser, driver) {
         return ctx.indexOf('NATIVE') !== -1;
       })[0];
     }).sleep(1000)
-    */
+    
     ;
 }
 
